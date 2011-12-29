@@ -6,11 +6,14 @@
 /*
  * Return a count of mutual elements in the input sets
  */
-var intersection = function () {
+var intersection = function (a, b) {
   var x = [];
-  for (var i in arguments) {
-    
-  }
+
+  a.forEach(function (e) {
+    if (e in b) x.push(e);
+  });
+
+  return x.length;
 }
 
 /*
@@ -18,6 +21,7 @@ var intersection = function () {
  */
 var union = function () {
   var x = [];
+
   for (var i in arguments) {
     for (var j in arguments[i]) {
       if (~x.indexOf(arguments[i][j])) {
@@ -25,6 +29,7 @@ var union = function () {
       }
     }
   }
+
   return x.length;
 }
 
