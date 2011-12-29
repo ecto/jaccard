@@ -4,7 +4,7 @@
  */
 
 /*
- * Return a count of mutual elements in the input sets
+ * Return mutual elements in the input sets
  */
 var intersection = function (a, b) {
   var x = [];
@@ -17,7 +17,7 @@ var intersection = function (a, b) {
 }
 
 /*
- * Return a count of all distinct elements from both input sets
+ * Return distinct elements from both input sets
  */
 var union = function (a, b) {
   var x = [];
