@@ -23,9 +23,7 @@ var union = function (a, b) {
   var x = [];
 
   var check = function (e) {
-    if (!~x.indexOf(e)) {
-      x.push(e);
-    }
+    if (!~x.indexOf(e)) x.push(e);
   }
 
   a.forEach(check);
