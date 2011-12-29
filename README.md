@@ -8,6 +8,16 @@
 
     npm install jaccard
 
+##methods
+
+###jaccard.index(a, b)
+
+Compute the similarity of two sets.
+
+###jaccard.distance(a, b)
+
+Compute the dissimilarity of two sets.
+
 ##usage
 
 ````javascript
