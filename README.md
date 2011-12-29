@@ -38,6 +38,8 @@ var b = [
 console.log(
   jaccard.index(a, b)
 );
+
+// 0.4
 ````
 
 ##license
