@@ -13,31 +13,32 @@ var intersection = function (a, b) {
     if (e in b) x.push(e);
   });
 
-  return x.length;
+  return x;
 }
 
 /*
  * Return a count of all distinct elements from both input sets
  */
-var union = function () {
+var union = function (a, b) {
   var x = [];
 
-  for (var i in arguments) {
-    for (var j in arguments[i]) {
-      if (~x.indexOf(arguments[i][j])) {
-        x.push(a[i]);
-      }
+  var check = function (e) {
+    if (!~x.indexOf(e)) {
+      x.push(e);
     }
   }
 
-  return x.length;
+  a.forEach(check);
+  b.forEach(check);
+
+  return x;
 }
 
 /*
  * Similarity
  */
 var index = function (a, b) {
-  return intersection(a, b) / union(a, b);
+  return intersection(a, b).length / union(a, b).length;
 }
 
 /*
