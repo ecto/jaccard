@@ -2,7 +2,7 @@
   "author": "Cam Pedersen <diffference@gmail.com> (http://campedersen.com/)",
   "name": "jaccard",
   "description": "Compute the similarity of two sets",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "repository": {
     "url": ""
   },
