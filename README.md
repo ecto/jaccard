@@ -10,15 +10,21 @@
 
 ##methods
 
-###jaccard.index(a, b)
+###jaccard.index(a, b, cb)
 
 Compute the similarity of two sets.
 
-###jaccard.distance(a, b)
+`cb` is an optional callback.
+
+###jaccard.distance(a, b, cb)
 
 Compute the dissimilarity of two sets.
 
+`cb` is an optional callback.
+
 ##usage
+
+Define your sets:
 
 ````javascript
 var jaccard = require('jaccard');
@@ -34,10 +40,22 @@ var b = [
   '4',
   '5'
 ];
+````
 
+Process synchronously:
+
+````javascript
 console.log(
   jaccard.index(a, b)
 );
+
+// 0.4
+````
+
+Or asynchronously:
+
+````javascript
+jaccard.index(a, b, console.log);
 
 // 0.4
 ````
