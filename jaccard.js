@@ -6,7 +6,7 @@
 /*
  * Return mutual elements in the input sets
  */
-var intersection = function (a, b) {
+var intersection = function (a, b, c) {
   var x = [];
 
   a.forEach(function (e) {
@@ -35,15 +35,23 @@ var union = function (a, b) {
 /*
  * Similarity
  */
-var index = function (a, b) {
-  return intersection(a, b).length / union(a, b).length;
+var index = function (a, b, c) {
+  if (c) {
+    c(intersection(a, b).length / union(a, b).length);
+  } else {
+    return intersection(a, b).length / union(a, b).length;
+  }
 }
 
 /*
  * Dissimilarity
  */
-var distance = function (a, b) {
-  return 1 - index(a, b);
+var distance = function (a, b, c) {
+  if (c) {
+    c(1 - index(a, b));
+  } else {
+    return 1 - index(a, b);
+  }
 }
 
 /*
