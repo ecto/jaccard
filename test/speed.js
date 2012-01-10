@@ -15,10 +15,11 @@ function shuffle(array) {
 
 function test (title, cb) {
   var start = +new Date();
-  cb(function () {
+  cb(function (i) {
     var end = +new Date();
     var time = end - start;
     console.log(title + ' took ' + time);
+    console.log('  ' + i);
   });
 }
 
