@@ -1,6 +1,6 @@
 /*
  * jaccard
- * <cam@onswipe.com>
+ * <cam@campedersen.com>
  */
 
 var async = require('async');
