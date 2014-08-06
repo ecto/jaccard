@@ -11,7 +11,7 @@ var async = require('async');
 var intersection = function (a, b, c) {
   var x = [];
   var check = function (e, cb) {
-    if (e in b) x.push(e);
+    if (~b.indexOf(e)) x.push(e);
     if (cb && typeof cb == 'function') cb(null);
   };
 
