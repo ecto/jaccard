@@ -49,7 +49,7 @@ console.log(
   jaccard.index(a, b)
 );
 
-// 0.4
+// 0.2
 ````
 
 Or asynchronously:
@@ -57,7 +57,7 @@ Or asynchronously:
 ````javascript
 jaccard.index(a, b, console.log);
 
-// 0.4
+// 0.2
 ````
 
 ##license
