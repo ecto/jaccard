@@ -12,8 +12,8 @@ var b = [
   '5'
 ];
 
-console.log('Index should be 0.4:');
+console.log('Index should be 0.2:');
 console.log(jaccard.index(a, b));
 
-console.log('Distance should be 0.6:');
+console.log('Distance should be 0.8:');
 console.log(jaccard.distance(a, b));
