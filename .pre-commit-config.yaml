@@ -1,0 +1,4 @@
+-   repo: git://github.com/pre-commit/pre-commit-hooks
+    sha: '96fb7fa10f2f4c11ed33482a9ad7474251e5e97f'  # Use the sha you want to point at
+    hooks:
+    -   id: check-json
